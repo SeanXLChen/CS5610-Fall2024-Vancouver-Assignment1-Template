@@ -108,10 +108,10 @@ For this assignment, you are expected to create a personal portfolio website. Be
 15. **Google Fonts** (5 pt).
    - Use Google Fonts to enhance typography in your project.
 
-16. **Anchor Links**.
+16. **Anchor Links** (5 pt).
    - Include at least one anchor link (`<a>`) that links to a specific section within the same page using an `id`.
 
-17. **Box-Sizing Behavior**.
+17. **Box-Sizing Behavior** (5 pt).
    - Adjust the box-sizing behavior so that the browser calculates an element’s total width and height, including its borders and padding.
 
 ### Additional Notes
