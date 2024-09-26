@@ -113,6 +113,7 @@ For this assignment, you are expected to create a personal portfolio website. Be
 
 17. **Box-Sizing Behavior** (5 pt).
    - Adjust the box-sizing behavior so that the browser calculates an element’s total width and height, including its borders and padding.
+   - Use **either Flexbox or Grid layout** in one or more sections for element positioning.
 
 ### Additional Notes
 
@@ -122,3 +123,14 @@ For this assignment, you are expected to create a personal portfolio website. Be
 ### Automated Testing
 
 Your project will be automatically tested against the rubric using a set of predefined tests. These tests will check the structure and content of your HTML and CSS files, so ensure your project strictly follows the guidelines provided. :warning: :warning: :warning: Any modification to files outside the `src` folder could result in failed tests or disqualification of your submission. :warning: :warning: :warning:
+
+#### Viewing Your Autograder Score
+
+To access the results of the autograder for your commits, follow these steps:
+
+1. After pushing your changes to GitHub, click on the commit message to view the details of the specific commit.
+   ![image](readme-img1.png)
+2. On the commit details page, find the Actions status and click on it to view the results of the autograder task.
+   ![image](readme-img2.png)
+3. Review the detailed report of your autograded score. This report will show which tests passed or failed, and how many points were awarded based on the rubric.
+   ![image](readme-img3.png)
