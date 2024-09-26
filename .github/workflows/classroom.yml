@@ -39,7 +39,7 @@ jobs:
         setup-command: npm install
         command: npx jest test01.test.js  # Use correct test folder
         timeout: 10
-        max-score: 3
+        max-score: 10
     
     - name: Test-02
       id: test-02
@@ -49,7 +49,7 @@ jobs:
         setup-command: npm install
         command: npx jest test02.test.js  # Use correct test folder
         timeout: 10
-        max-score: 3
+        max-score: 5
     
     - name: Test-03
       id: test-03
@@ -59,7 +59,7 @@ jobs:
         setup-command: npm install
         command: npx jest test03.test.js  # Use correct test folder
         timeout: 10
-        max-score: 3
+        max-score: 5
     
     - name: Test-04
       id: test-04
@@ -69,7 +69,7 @@ jobs:
         setup-command: npm install
         command: npx jest test04.test.js  # Use correct test folder
         timeout: 10
-        max-score: 3
+        max-score: 10
     
     - name: Test-05
       id: test-05
@@ -79,7 +79,7 @@ jobs:
         setup-command: npm install
         command: npx jest test05.test.js  # Use correct test folder
         timeout: 10
-        max-score: 3
+        max-score: 10
     
     - name: Test-06
       id: test-06
@@ -89,7 +89,7 @@ jobs:
         setup-command: npm install
         command: npx jest test06.test.js  # Use correct test folder
         timeout: 10
-        max-score: 3
+        max-score: 5
     
     - name: Test-07
       id: test-07
@@ -99,7 +99,7 @@ jobs:
         setup-command: npm install
         command: npx jest test07.test.js  # Use correct test folder
         timeout: 10
-        max-score: 3
+        max-score: 5
     
     - name: Test-08
       id: test-08
@@ -109,7 +109,7 @@ jobs:
         setup-command: npm install
         command: npx jest test08.test.js  # Use correct test folder
         timeout: 10
-        max-score: 3
+        max-score: 5
     
     - name: Test-09
       id: test-09
@@ -119,7 +119,7 @@ jobs:
         setup-command: npm install
         command: npx jest test09.test.js  # Use correct test folder
         timeout: 10
-        max-score: 3
+        max-score: 5
     
     - name: Test-10
       id: test-10
@@ -129,7 +129,7 @@ jobs:
         setup-command: npm install
         command: npx jest test10.test.js  # Use correct test folder
         timeout: 10
-        max-score: 3
+        max-score: 5
     
     - name: Test-11
       id: test-11
@@ -139,7 +139,7 @@ jobs:
         setup-command: npm install
         command: npx jest test11.test.js  # Use correct test folder
         timeout: 10
-        max-score: 3
+        max-score: 5
     
     - name: Test-12
       id: test-12
@@ -149,7 +149,7 @@ jobs:
         setup-command: npm install
         command: npx jest test/test12.test.js  # Use correct test folder
         timeout: 10
-        max-score: 3
+        max-score: 5
     
     - name: Test-13
       id: test-13
@@ -159,7 +159,7 @@ jobs:
         setup-command: npm install
         command: npx jest test/test13.test.js  # Use correct test folder
         timeout: 10
-        max-score: 3
+        max-score: 5
     
     - name: Test-14
       id: test-14
@@ -169,7 +169,7 @@ jobs:
         setup-command: npm install
         command: npx jest test/test14.test.js  # Use correct test folder
         timeout: 10
-        max-score: 3
+        max-score: 5
     
     - name: Test-15
       id: test-15
@@ -179,7 +179,7 @@ jobs:
         setup-command: npm install
         command: npx jest test/test15.test.js  # Use correct test folder
         timeout: 10
-        max-score: 3
+        max-score: 5
     
     - name: Test-16
       id: test-16
@@ -189,7 +189,7 @@ jobs:
         setup-command: npm install
         command: npx jest test/test16.test.js  # Use correct test folder
         timeout: 10
-        max-score: 3
+        max-score: 5
     
     - name: Test-17
       id: test-17
@@ -199,7 +199,7 @@ jobs:
         setup-command: npm install
         command: npx jest test/test17.test.js  # Use correct test folder
         timeout: 10
-        max-score: 3
+        max-score: 5
 
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1
