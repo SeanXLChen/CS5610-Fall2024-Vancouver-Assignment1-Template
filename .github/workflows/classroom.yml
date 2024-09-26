@@ -1,0 +1,225 @@
+name: Autograding Tests
+'on':
+- push
+- repository_dispatch
+permissions:
+  checks: write
+  actions: read
+  contents: read
+
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Download test files from private repository
+      run: |
+        git clone https://$GITHUB_ACTOR:${{ secrets.PAT_TOKEN }}@github.com/SeanXLChen/WebDev-Assignment1.git
+        mkdir test
+        cp -r WebDev-Assignment1/test/* ./test/  # Copy the test files to __tests__ folder
+        
+    - name: Remove WebDev-Assignment1 folder (optional)
+      run: |
+        rm -rf WebDev-Assignment1  # This removes the WebDev-Assignment1 folder entirely if you want to ignore it
+    
+    - name: Check directory structure
+      run: |
+        pwd
+        ls -R  # Output directory structure to confirm the layout
+    
+    - name: Test-01
+      id: test-01
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Test-01
+        setup-command: npm install
+        command: npx jest test01.test.js  # Use correct test folder
+        timeout: 10
+        max-score: 3
+    
+    - name: Test-02
+      id: test-02
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Test-02
+        setup-command: npm install
+        command: npx jest test02.test.js  # Use correct test folder
+        timeout: 10
+        max-score: 3
+    
+    - name: Test-03
+      id: test-03
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Test-03
+        setup-command: npm install
+        command: npx jest test03.test.js  # Use correct test folder
+        timeout: 10
+        max-score: 3
+    
+    - name: Test-04
+      id: test-04
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Test-04
+        setup-command: npm install
+        command: npx jest test04.test.js  # Use correct test folder
+        timeout: 10
+        max-score: 3
+    
+    - name: Test-05
+      id: test-05
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Test-05
+        setup-command: npm install
+        command: npx jest test05.test.js  # Use correct test folder
+        timeout: 10
+        max-score: 3
+    
+    - name: Test-06
+      id: test-06
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Test-06
+        setup-command: npm install
+        command: npx jest test06.test.js  # Use correct test folder
+        timeout: 10
+        max-score: 3
+    
+    - name: Test-07
+      id: test-07
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Test-07
+        setup-command: npm install
+        command: npx jest test07.test.js  # Use correct test folder
+        timeout: 10
+        max-score: 3
+    
+    - name: Test-08
+      id: test-08
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Test-08
+        setup-command: npm install
+        command: npx jest test08.test.js  # Use correct test folder
+        timeout: 10
+        max-score: 3
+    
+    - name: Test-09
+      id: test-09
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Test-09
+        setup-command: npm install
+        command: npx jest test09.test.js  # Use correct test folder
+        timeout: 10
+        max-score: 3
+    
+    - name: Test-10
+      id: test-10
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Test-10
+        setup-command: npm install
+        command: npx jest test10.test.js  # Use correct test folder
+        timeout: 10
+        max-score: 3
+    
+    - name: Test-11
+      id: test-11
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Test-11
+        setup-command: npm install
+        command: npx jest test11.test.js  # Use correct test folder
+        timeout: 10
+        max-score: 3
+    
+    - name: Test-12
+      id: test-12
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Test-12
+        setup-command: npm install
+        command: npx jest test/test12.test.js  # Use correct test folder
+        timeout: 10
+        max-score: 3
+    
+    - name: Test-13
+      id: test-13
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Test-13
+        setup-command: npm install
+        command: npx jest test/test13.test.js  # Use correct test folder
+        timeout: 10
+        max-score: 3
+    
+    - name: Test-14
+      id: test-14
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Test-14
+        setup-command: npm install
+        command: npx jest test/test14.test.js  # Use correct test folder
+        timeout: 10
+        max-score: 3
+    
+    - name: Test-15
+      id: test-15
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Test-15
+        setup-command: npm install
+        command: npx jest test/test15.test.js  # Use correct test folder
+        timeout: 10
+        max-score: 3
+    
+    - name: Test-16
+      id: test-16
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Test-16
+        setup-command: npm install
+        command: npx jest test/test16.test.js  # Use correct test folder
+        timeout: 10
+        max-score: 3
+    
+    - name: Test-17
+      id: test-17
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Test-17
+        setup-command: npm install
+        command: npx jest test/test17.test.js  # Use correct test folder
+        timeout: 10
+        max-score: 3
+
+    - name: Autograding Reporter
+      uses: classroom-resources/autograding-grading-reporter@v1
+      env:
+        TEST-01_RESULTS: "${{steps.test-01.outputs.result}}"
+        TEST-02_RESULTS: "${{steps.test-02.outputs.result}}"
+        TEST-03_RESULTS: "${{steps.test-03.outputs.result}}"
+        TEST-04_RESULTS: "${{steps.test-04.outputs.result}}"
+        TEST-05_RESULTS: "${{steps.test-05.outputs.result}}"
+        TEST-06_RESULTS: "${{steps.test-06.outputs.result}}"
+        TEST-07_RESULTS: "${{steps.test-07.outputs.result}}"
+        TEST-08_RESULTS: "${{steps.test-08.outputs.result}}"
+        TEST-09_RESULTS: "${{steps.test-09.outputs.result}}"
+        TEST-10_RESULTS: "${{steps.test-10.outputs.result}}"
+        TEST-11_RESULTS: "${{steps.test-11.outputs.result}}"
+        TEST-12_RESULTS: "${{steps.test-12.outputs.result}}"
+        TEST-13_RESULTS: "${{steps.test-13.outputs.result}}"
+        TEST-14_RESULTS: "${{steps.test-14.outputs.result}}"
+        TEST-15_RESULTS: "${{steps.test-15.outputs.result}}"
+        TEST-16_RESULTS: "${{steps.test-16.outputs.result}}"
+        TEST-17_RESULTS: "${{steps.test-17.outputs.result}}"
+      with:
+        runners: test-01,test-02,test-03,test-04,test-05,test-06,test-07,test-08,test-09,test-10,test-11,test-12,test-13,test-14,test-15,test-16,test-17
